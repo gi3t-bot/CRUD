@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 SECRET_KEY = os.environ.get('SECRET_KEY', 'insecure-dev-key-change-in-prod')
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 # Application definition
 INSTALLED_APPS = [
@@ -132,3 +132,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # Where collectstatic puts files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#dummy
